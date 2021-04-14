@@ -7,13 +7,31 @@ nav {
     display: flex;
     li {
       margin: 0 1rem;
+      display: inline-block;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: white;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
       a {
         text-decoration: none;
         color: white;
-        &:hover {
-          color: blue;
-          transition: transform 250ms;
-        }
+        // &:hover {
+        //   color: blue;
+        //   transition: transform 250ms;
+        // }
       }
       // a:hover {
       // color: red;
@@ -21,8 +39,3 @@ nav {
     }
   }
 }
-
-// .active {
-//   color: red;
-//   text-decoration: underline;
-// }

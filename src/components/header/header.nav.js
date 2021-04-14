@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        <li>
+        <li className="hover">
           <Link href="/">
             <a className={router.pathname == "/" ? "active" : ""}>Home</a>
           </Link>
