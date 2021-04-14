@@ -6,8 +6,8 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        <li className="hover">
-          <Link href="/">
+        <li>
+          <Link href="/" className="hover">
             <a className={router.pathname == "/" ? "active" : ""}>Home</a>
           </Link>
         </li>
