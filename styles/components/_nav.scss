@@ -1,8 +1,8 @@
 nav {
   align-items: center;
-  margin-right: 4rem;
+  margin-right: 1rem;
   ul {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     list-style: none;
     display: flex;
     li {
@@ -20,7 +20,7 @@ nav {
       background-position: 100%;
       transition: background-position 275ms ease;
       font-weight: 400;
-      margin: 0 2rem;
+      margin: 0 1rem;
       display: inline-block;
       position: relative;
       &::before {
