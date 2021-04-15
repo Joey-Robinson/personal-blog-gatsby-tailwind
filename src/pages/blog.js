@@ -32,19 +32,16 @@ const Blog = ({ allPosts }) => {
   const posts = hasSearchResults ? filteredData : allPosts
   return (
     <GlobalLayout>
-      <div>
+      <>
         <ul
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            justifyItems: "center",
-          }}
-          className="blog"
+          className="blog text-white list-none flex flex-row flex-wrap justify-around"
           key="me"
         >
           {posts &&
             posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
-              const tagList = tags.map((tag) => <p>{tag}</p>)
+              const tagList = tags.map((tag) => (
+                <p className="pr-2 text-danger">{tag}</p>
+              ))
               return (
                 <PostPreview
                   tags={tagList}
@@ -58,7 +55,7 @@ const Blog = ({ allPosts }) => {
               )
             })}
         </ul>
-      </div>
+      </>
     </GlobalLayout>
   )
 }
