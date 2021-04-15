@@ -6,6 +6,20 @@ nav {
     list-style: none;
     display: flex;
     li {
+      overflow: hidden;
+      background: linear-gradient(
+        to right,
+        rgb(255, 255, 255),
+        white 50%,
+        $dark 50%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 275ms ease;
+      font-weight: 400;
       margin: 0 2rem;
       display: inline-block;
       position: relative;
@@ -23,15 +37,10 @@ nav {
       }
       &:hover::before {
         transform: scaleX(1);
-        transform-origin: bottom left;
+        transform-origin: bottom right;
       }
-      a {
-        text-decoration: none;
-        color: white;
-        &:hover {
-          color: $accent;
-          transition: color 0.25s ease-out;
-        }
+      &:hover {
+        background-position: 0 100%;
       }
     }
   }
