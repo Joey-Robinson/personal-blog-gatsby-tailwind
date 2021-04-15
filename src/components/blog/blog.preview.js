@@ -7,7 +7,7 @@ const PostPreview = memo(
   ({ specialKey, tags, title, coverImage, date, excerpt, slug }) => {
     const shortenedExcerpt = excerpt.slice(0, 150)
     return (
-      <li style={{ width: "800px" }} key={specialKey} className="preview">
+      <li key={specialKey} className="preview w-5/12">
         <h2 className="text-xl font-bold">
           <Link as={`/blog/${slug}`} href="/blog/[slug]">
             <a>{title}</a>
