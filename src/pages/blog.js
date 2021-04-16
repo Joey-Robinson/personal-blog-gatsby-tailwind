@@ -40,7 +40,7 @@ const Blog = ({ allPosts }) => {
           {posts &&
             posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
               const tagList = tags.map((tag) => (
-                <p className="pr-2 text-danger">{tag}</p>
+                <p className="preview--tags text-lightBlue">{tag}</p>
               ))
               return (
                 <PostPreview

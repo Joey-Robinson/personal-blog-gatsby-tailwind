@@ -7,13 +7,13 @@ const PostPreview = memo(
   ({ specialKey, tags, title, coverImage, date, excerpt, slug }) => {
     const shortenedExcerpt = excerpt.slice(0, 150)
     return (
-      <li key={specialKey} className="preview w-5/12">
-        <h2 className="text-xl font-bold">
+      <li key={specialKey} className="preview">
+        <h2 className="text-2xl font-bold text-secondary">
           <Link as={`/blog/${slug}`} href="/blog/[slug]">
-            <a>{title}</a>
+            <a className="underline">{title}</a>
           </Link>
         </h2>
-        <div className="preview--date text-xl font-bold">
+        <div className="preview--date text-xl font-bold text-lightBlue">
           <Date dateString={date} />
         </div>
         <div className="preview--image">
@@ -22,7 +22,7 @@ const PostPreview = memo(
         <div className="preview--excerpt text-secondary">
           <p>{shortenedExcerpt}</p>
         </div>
-        <div className="preview--tags mt-3 flex">{tags}</div>
+        <div className="mt-3 flex justify-around">{tags}</div>
       </li>
     )
   }

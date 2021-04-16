@@ -14,6 +14,8 @@ module.exports = {
       secondary: "#ffed4a",
       danger: "#e3342f",
       white: "#fafafa",
+      baby: "#1affff",
+      lightBlue: "#818cf8",
     },
     fontSize: {
       xs: ".75rem",
