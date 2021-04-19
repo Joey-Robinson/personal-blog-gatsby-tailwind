@@ -13,6 +13,7 @@ const Blog = ({ allPosts }) => {
   })
 
   const handleInputChange = (event) => {
+    event.preventDefault()
     const query = event.target.value
     const posts = morePosts || []
 
@@ -35,20 +36,20 @@ const Blog = ({ allPosts }) => {
   const posts = hasSearchResults ? filteredData : morePosts
   return (
     <GlobalLayout>
-      <GlobalSearch
-        onSubmit={(event) => event.preventDefault()}
-        value={query}
-        onChange={handleInputChange}
-        placeholder="Search Blog"
-        id="blog--search"
-        spanText="Search Blog"
-        ariaLabel="Search Blog"
-        label="Search Blog"
-        idFor="blog--search"
-        submitStyle={{ display: "none" }}
-      />
-      <div>
-        <ul className="blog text-white list-none flex flex-row flex-wrap justify-around">
+      <>
+        <GlobalSearch
+          onSubmit={(event) => event.preventDefault()}
+          value={query}
+          onChange={handleInputChange}
+          placeholder="Search Blog"
+          id="blog--search"
+          spanText="Search Blog"
+          ariaLabel="Search Blog"
+          label="Search Blog"
+          idFor="blog--search"
+          submitStyle={{ display: "none" }}
+        />
+        <ul className="blog">
           {posts &&
             posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
               const tagList = tags.map((tag) => <li>{tag}</li>)
@@ -65,7 +66,7 @@ const Blog = ({ allPosts }) => {
               )
             })}
         </ul>
-      </div>
+      </>
     </GlobalLayout>
   )
 }
@@ -85,5 +86,20 @@ export async function getStaticProps() {
     props: { allPosts },
   }
 }
+
+// export async function getStaticPaths() {
+//   const posts = getAllPosts(["slug"])
+
+//   return {
+//     paths: posts.map((posts) => {
+//       return {
+//         params: {
+//           slug: posts.slug,
+//         },
+//       }
+//     }),
+//     fallback: false,
+//   }
+// }
 
 export default Blog
