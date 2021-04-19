@@ -16,7 +16,7 @@ const PostPreview = memo(
         <div className="preview--date text-xl font-bold text-lightBlue">
           <Date dateString={date} />
         </div>
-        <div className="preview--image">
+        <div className="preview--image mt-1">
           <CoverImage slug={slug} title={title} src={coverImage} />
         </div>
         <div className="preview--excerpt text-secondary">

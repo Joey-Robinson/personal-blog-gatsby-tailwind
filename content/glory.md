@@ -13,7 +13,6 @@ tags:
   - Anime
   - Legacy
   - Change
-  - Godly
 ---
 
 # Lorem Ipsum

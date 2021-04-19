@@ -1,7 +1,8 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { getAllPosts } from "../components/blog/blog.api"
 import PostPreview from "../components/blog/blog.preview"
 import GlobalLayout from "../components/global/global.layout"
+import GlobalSearch from "../components/global/global.search"
 
 const Blog = ({ allPosts }) => {
   const morePosts = allPosts
@@ -14,6 +15,7 @@ const Blog = ({ allPosts }) => {
   const handleInputChange = (event) => {
     const query = event.target.value
     const posts = morePosts || []
+
     const filteredData = posts.filter((post) => {
       const { title, tags } = post
       return (
@@ -27,21 +29,29 @@ const Blog = ({ allPosts }) => {
       filteredData,
     })
   }
+
   const { filteredData, query } = filteredPosts
   const hasSearchResults = filteredData && query !== emptyQuery
-  const posts = hasSearchResults ? filteredData : allPosts
+  const posts = hasSearchResults ? filteredData : morePosts
   return (
     <GlobalLayout>
-      <>
-        <ul
-          className="blog text-white list-none flex flex-row flex-wrap justify-around"
-          key="me"
-        >
+      <GlobalSearch
+        onSubmit={(event) => event.preventDefault()}
+        value={query}
+        onChange={handleInputChange}
+        placeholder="Search Blog"
+        id="blog--search"
+        spanText="Search Blog"
+        ariaLabel="Search Blog"
+        label="Search Blog"
+        idFor="blog--search"
+        submitStyle={{ display: "none" }}
+      />
+      <div>
+        <ul className="blog text-white list-none flex flex-row flex-wrap justify-around">
           {posts &&
             posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
-              const tagList = tags.map((tag) => (
-                <p className="preview--tags text-lightBlue">{tag}</p>
-              ))
+              const tagList = tags.map((tag) => <li>{tag}</li>)
               return (
                 <PostPreview
                   tags={tagList}
@@ -55,7 +65,7 @@ const Blog = ({ allPosts }) => {
               )
             })}
         </ul>
-      </>
+      </div>
     </GlobalLayout>
   )
 }

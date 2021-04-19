@@ -3,7 +3,7 @@ import Link from "next/link"
 const Navigation = () => {
   return (
     <nav>
-      <ul>
+      <ul className="text-xxl flex">
         <li>
           <Link href="/">
             <a>Home</a>

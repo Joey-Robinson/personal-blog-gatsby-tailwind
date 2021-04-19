@@ -11,9 +11,6 @@ ogImage:
 tags:
   - Akira
   - Anime
-  - Legacy
-  - Change
-  - Godly
 ---
 
 # Lorem Ipsum
