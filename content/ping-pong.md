@@ -1,23 +1,23 @@
 ---
-title: "Akira, forever defining anime."
-excerpt: "Why and how Akira has - for 30 years now - defined anime, anime culture, and how it has influenced generations of anime to come."
-description: "Why and how Akira has - for 30 years now - defined anime, anime culture, and how it has influenced generations of anime to come."
-date: "2020-03-16T05:35:07.322Z"
+title: "Can Ping Pong Make You Feel?"
+date: "2019-12-01"
 author:
   name: Joey Robinson
-coverImage: "/assets/blog/ak.jpg"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus."
+coverImage: "/assets/blog/ppb.png"
 ogImage:
-  url: "/assets/blog/ak.jpg"
+  url: "/assets/blog/ppb.png"
 tags:
-  - Akira
-  - Anime
+  - Ping-Pong
+  - Sports
+  - Hero
 ---
 
-# Lorem Ipsum
+# Ping-Pong
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
 
-![Akira](/assets/blog/akiraim.jpg)
+![The Dragon Looms](/assets/blog/imposingdragon.jpg)
 
 Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
 

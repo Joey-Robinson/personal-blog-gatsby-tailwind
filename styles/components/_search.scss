@@ -1,0 +1,24 @@
+.search--input {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+
+  span {
+    display: block;
+  }
+
+  label {
+    text-align: center;
+  }
+
+  input {
+    color: $dark;
+    outline: none;
+    background: $lightIndie;
+    border-radius: 4px;
+    display: inline-block;
+    &::placeholder {
+      color: $secondary;
+    }
+  }
+}
