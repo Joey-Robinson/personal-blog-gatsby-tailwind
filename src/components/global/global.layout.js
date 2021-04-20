@@ -1,9 +1,9 @@
 import Header from "../header/header.main"
 
-const GlobalLayout = ({ children }) => (
+const GlobalLayout = ({ children, className }) => (
   <main className="primary">
     <Header />
-    <section>{children}</section>
+    <section className={className}>{children}</section>
   </main>
 )
 

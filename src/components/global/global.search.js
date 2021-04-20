@@ -15,10 +15,7 @@ const GlobalSearch = ({
   submitStyle,
 }) => {
   return (
-    <div
-      className="search--input"
-      style={{ marginBottom: "2rem", width: "200px", height: "25px" }}
-    >
+    <div className="search--input">
       <label htmlFor={idFor}>
         <span>{spanText}</span>
       </label>

@@ -35,7 +35,7 @@ const Blog = ({ allPosts }) => {
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts = hasSearchResults ? filteredData : morePosts
   return (
-    <GlobalLayout>
+    <GlobalLayout className="placeholder">
       <>
         <GlobalSearch
           onSubmit={(event) => event.preventDefault()}
@@ -50,21 +50,20 @@ const Blog = ({ allPosts }) => {
           submitStyle={{ display: "none" }}
         />
         <ul className="blog">
-          {posts &&
-            posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
-              const tagList = tags.map((tag) => <li>{tag}</li>)
-              return (
-                <PostPreview
-                  tags={tagList}
-                  key={title}
-                  title={title}
-                  date={date}
-                  excerpt={excerpt}
-                  coverImage={coverImage}
-                  slug={slug}
-                />
-              )
-            })}
+          {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
+            const tagList = tags.map((tag) => <p key={Math.random()}>{tag}</p>)
+            return (
+              <PostPreview
+                tags={tagList}
+                key={title}
+                title={title}
+                date={date}
+                excerpt={excerpt}
+                coverImage={coverImage}
+                slug={slug}
+              />
+            )
+          })}
         </ul>
       </>
     </GlobalLayout>
