@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { getAllPosts, getPostBySlug } from "../../components/blog/blog.api"
 import PostBody from "../../components/blog/blog.main"
 import markdownToHtml from "../../components/blog/blog.parser"
+import GlobalLayout from "../../components/global/global.layout"
 
 const BlogPost = ({ post }) => {
   const router = useRouter()
@@ -11,16 +12,20 @@ const BlogPost = ({ post }) => {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <div>
-      <p>From BlogPost - This will be the actual blog content || page</p>
-      {router.isFallback ? (
-        <div>Loading…</div>
-      ) : (
-        <article className="newsletter">
-          <PostBody content={post.content} />
-        </article>
-      )}
-    </div>
+    <>
+      <GlobalLayout className="read">
+        {router.isFallback ? (
+          <div>Loading…</div>
+        ) : (
+          <>
+            {/* <button className="read--back" onClick={() => router.back()}>
+              Go Back
+            </button> */}
+            <PostBody content={post.content} />
+          </>
+        )}
+      </GlobalLayout>
+    </>
   )
 }
 

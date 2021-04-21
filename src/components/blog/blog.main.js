@@ -1,7 +1,7 @@
 const PostBody = ({ content }) => {
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <article dangerouslySetInnerHTML={{ __html: content }} />
     </>
   )
 }
