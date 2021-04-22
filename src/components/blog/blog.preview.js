@@ -16,7 +16,7 @@ const PostPreview = ({
   return (
     <li key={specialKey} className="preview">
       <h2 className="text-2xl font-bold text-secondary">
-        <Link as={`/blog/${slug}`} href="/blog/[slug]">
+        <Link as={`/blog/${slug}/`} href="/blog/[slug]/">
           <a className="underline">{title}</a>
         </Link>
       </h2>
