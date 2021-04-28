@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const Navigation = () => {
   return (
-    <nav>
+    <nav style={{ fontSize: "25px", color: "red", listStyle: "none" }}>
       <ul className="text-xxl flex">
         <li>
           <Link href="/">
