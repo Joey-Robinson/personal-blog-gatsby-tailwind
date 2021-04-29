@@ -1,4 +1,4 @@
-import GlobalLayout from "../components/global/global.layout"
+import GlobalLayout from "../components/global/global.layout";
 
 const Home = () => (
   <GlobalLayout>
@@ -6,6 +6,6 @@ const Home = () => (
       <h1 className="text-7xl text-secondary">monkaS</h1>
     </div>
   </GlobalLayout>
-)
+);
 
-export default Home
+export default Home;
