@@ -1,6 +1,6 @@
 import "../../static/dummy.css"
-import "../styles/main.scss"
-import "../styles/tailwind.css"
+import "../../static/main.scss"
+import "../../static/tailwind.css"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
