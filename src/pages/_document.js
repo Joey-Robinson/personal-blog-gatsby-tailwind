@@ -1,4 +1,9 @@
 import Document, { Head, Html, Main, NextScript } from "next/document"
+// prettier-ignore
+import "../../styles/main.scss"
+// prettier-ignore
+// prettier-ignore
+import "../../styles/tailwind.css"
 
 export default class MyDocument extends Document {
   render() {
