@@ -1,8 +1,8 @@
 // prettier-ignore
-import "../../static/main.scss"
+import "../static/main.scss"
 // prettier-ignore
 // prettier-ignore
-import "../../static/tailwind.css"
+import "../static/tailwind.css"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
