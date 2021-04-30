@@ -10,12 +10,13 @@ const GlobalSearch = ({
   label,
   spanText,
   idFor,
+  className,
   submitValue,
   submitClassName,
   submitStyle,
 }) => {
   return (
-    <div className="search--input">
+    <div className={className}>
       <label htmlFor={idFor}>
         <span>{spanText}</span>
       </label>

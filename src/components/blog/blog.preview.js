@@ -15,21 +15,21 @@ const PostPreview = ({
   const shortenedExcerpt = excerpt.slice(0, 150)
   return (
     <li key={specialKey} className="preview">
-      <h2 className="text-2xl font-bold text-secondary">
+      <h2 className="preview--heading">
         <Link as={`/blog/${slug}/`} href="/blog/[slug]/">
           <a className="underline">{title}</a>
         </Link>
       </h2>
-      <div className="preview--date text-xl font-bold text-lightBlue">
+      <div className="preview--date">
         <Date dateString={date} />
       </div>
-      <div className="preview--image mt-1">
+      <div className="preview--image">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <div className="preview--excerpt text-secondary">
+      <div className="preview--excerpt">
         <p>{shortenedExcerpt}</p>
       </div>
-      <div className="mt-3 flex justify-around">{tags}</div>
+      <div className="preview--tags">{tags}</div>
     </li>
   )
 }

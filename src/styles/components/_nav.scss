@@ -1,9 +1,14 @@
 nav {
   align-items: center;
-  margin-right: 1rem;
-  background: red;
+  margin-right: 3rem;
+  color: #1a1a1a;
   ul {
+    font-size: 3rem;
+    display: flex;
     list-style: none;
+    a {
+      text-decoration: none;
+    }
     li {
       overflow: hidden;
       background: linear-gradient(
@@ -19,7 +24,7 @@ nav {
       background-position: 100%;
       transition: background-position 275ms ease;
       font-weight: 400;
-      margin: 0 1rem;
+      margin: 0 2rem;
       display: inline-block;
       position: relative;
       &::before {
