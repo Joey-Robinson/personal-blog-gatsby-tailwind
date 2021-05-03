@@ -29,7 +29,7 @@ const PostPreview = ({
       <div className="preview--excerpt">
         <p>{shortenedExcerpt}</p>
       </div>
-      <div className="preview--tags">{tags}</div>
+      <ul className="preview--tags">{tags}</ul>
     </li>
   )
 }

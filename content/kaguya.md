@@ -16,6 +16,8 @@ tags:
   - President will win
 ---
 
+# Smug Kaguya
+
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 cupiditate aperiam itaque laboriosam illum, minus vel reiciendis, esse
 tenetur libero explicabo minima veritatis in excepturi eligendi,
@@ -41,6 +43,8 @@ iusto minima perferendis corrupti officiis harum molestiae. Et
 voluptatum tempora rerum eos aperiam libero molestias excepturi.
 Fugiat placeat maiores repellat at hic iste sequi vero quod, nostrum
 quaerat.
+
+<img src="/assets/blog/smugkaguya.jpg" alt="Smug Kaguya"/>
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 cupiditate aperiam itaque laboriosam illum, minus vel reiciendis, esse

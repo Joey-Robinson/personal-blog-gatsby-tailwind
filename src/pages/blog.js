@@ -53,7 +53,9 @@ const Blog = ({ allPosts }) => {
 
         <ul className="blog--ul">
           {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
-            const tagList = tags.map((tag) => <p key={Math.random()}>{tag}</p>)
+            const tagList = tags.map((tag) => (
+              <li key={Math.random()}>⸢{tag}⸥</li>
+            ))
             return (
               <PostPreview
                 tags={tagList}

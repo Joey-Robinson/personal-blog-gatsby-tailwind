@@ -1,22 +1,25 @@
 .read {
   display: grid;
   color: white;
-  grid-template-columns: 15vw 3fr 15vw;
+  grid-template-columns: 1fr;
   article {
-    grid-column: 2;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  p {
-    padding: 1.5rem 0;
-    font-size: 1.5rem;
-  }
-  h1 {
-    font-size: 7rem;
-    text-align: center;
-  }
-  img {
-    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 15vw 3fr 15vw;
+    justify-items: center;
+    * {
+      grid-column: 2;
+    }
+    p {
+      font-size: 2.5rem;
+      padding: 1.5rem 0;
+    }
+    h1 {
+      font-size: 7rem;
+    }
+    video,
+    img {
+      width: 100%;
+      margin: 1.5rem 0;
+    }
   }
 }
