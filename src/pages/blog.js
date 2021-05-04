@@ -50,7 +50,7 @@ const Blog = ({ allPosts }) => {
           idFor="blog--search"
           submitStyle={{ display: "none" }}
         />
-
+        <h1 className="blog--heading">Stuff I Think, I Guess</h1>
         <ul className="blog--ul">
           {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
             const tagList = tags.map((tag) => (

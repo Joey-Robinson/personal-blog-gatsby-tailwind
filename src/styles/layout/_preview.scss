@@ -27,6 +27,7 @@
   }
   &--excerpt {
     color: #ffed4a;
+    padding: 0.75rem 0;
     font-size: 20px;
     grid-row: 4;
   }
@@ -38,9 +39,9 @@
     grid-row: 5;
     list-style: none;
     color: #818cf8;
-
+    padding: 0.75rem 0;
     li {
-      font-size: 1.5rem;
+      font-size: 18px;
       padding: 0 1.5rem 0 0;
     }
   }
