@@ -41,13 +41,13 @@
 
     padding: 0.75rem 0;
     li {
-      background: #818cf8;
+      background: lighten($accent, 10%);
       color: #1a1a1a;
+      font-weight: medium;
       font-size: 20px;
       margin: 0 1.5rem 0 0;
       padding: 2.5px 16px;
       border-radius: 5px;
-      // padding: 0 1.5rem 0 0;
     }
   }
 }
