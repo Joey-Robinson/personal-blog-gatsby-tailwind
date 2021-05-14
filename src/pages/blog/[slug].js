@@ -14,13 +14,13 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <GlobalLayout className="read">
+        <button className="read--back" onClick={() => router.back()}>
+          <span aria-hidden="true">&laquo;</span>
+        </button>
         {router.isFallback ? (
           <div>Loading…</div>
         ) : (
           <>
-            {/* <button className="read--back" onClick={() => router.back()}>
-              Go Back
-            </button> */}
             <PostBody content={post.content} />
           </>
         )}

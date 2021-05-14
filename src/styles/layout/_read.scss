@@ -2,6 +2,16 @@
   display: grid;
   color: white;
   grid-template-columns: 1fr;
+  &--back {
+    background: $secondary;
+    border: none;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 60%;
+    font-size: 22px;
+    position: fixed;
+  }
   article {
     display: grid;
     grid-template-columns: 15vw 3fr 15vw;

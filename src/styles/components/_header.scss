@@ -5,4 +5,7 @@ header {
   display: grid;
   align-items: center;
   justify-items: end;
+  h1 {
+    align-self: center;
+  }
 }
