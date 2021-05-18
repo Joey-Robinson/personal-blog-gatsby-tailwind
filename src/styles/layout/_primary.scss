@@ -1,4 +1,6 @@
-.primary {
-  display: grid;
-  grid-template-rows: 6rem 1fr;
+.general {
+  @include respond(phone) {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }

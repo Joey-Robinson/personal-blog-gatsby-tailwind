@@ -2,8 +2,14 @@ nav {
   align-items: center;
   margin-right: 3rem;
   color: #1a1a1a;
+  @include respond(phone) {
+    justify-self: center;
+  }
   ul {
     font-size: 3rem;
+    @include respond(phone) {
+      font-size: 4rem;
+    }
     display: flex;
     list-style: none;
     a {

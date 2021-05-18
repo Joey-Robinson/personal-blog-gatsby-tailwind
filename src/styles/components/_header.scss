@@ -1,10 +1,18 @@
 header {
   background: #818cf8;
   grid-row: 1;
-  height: 6rem;
+  // height: 6rem;
   display: grid;
   align-items: center;
   justify-items: end;
+  @include respond(phone) {
+    grid-row: 1;
+    height: 10rem;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
   h1 {
     align-self: center;
   }

@@ -1,6 +1,11 @@
 .blog {
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+    grid-row: 2;
+  }
   &--heading {
     grid-row: 1;
     grid-column: 2;
