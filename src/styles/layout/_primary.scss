@@ -1,7 +1,7 @@
 .primary {
   display: grid;
   grid-template-rows: 5rem 1fr;
-  // @include for-size(phone-only) {
-  //   width: 431.95px;
-  // }
+  @include for-size(iphone) {
+    width: 80rem;
+  }
 }

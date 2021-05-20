@@ -5,20 +5,15 @@ header {
   display: grid;
   align-items: center;
   justify-items: end;
-  @include respond(phone) {
-    height: 5rem;
-    justify-items: center;
-  }
-}
-
-// 48
-.headerb {
-  background: #818cf8;
-  height: 5rem;
-  display: grid;
-  // align-items: center;
-  // justify-items: end;
-  @include for-size(phone-only) {
-    height: 5rem;
-  }
+  // @include for-size(iphone) {
+  //   height: 9.5rem;
+  //   justify-content: center;
+  // }
+  // nav {
+  //   ul {
+  //     @include for-size(iphone) {
+  //       font-size: 4.7rem;
+  //     }
+  //   }
+  // }
 }

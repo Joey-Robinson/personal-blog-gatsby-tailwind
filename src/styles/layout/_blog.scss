@@ -1,10 +1,12 @@
 .blog {
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
-  @include for-size(phone-only) {
+  @include for-size(iphone) {
     grid-template-columns: 1fr;
     grid-column: 1;
     grid-row: 2;
+    // margin: 15rem;
+    margin-top: 15rem;
   }
 
   &--heading {
@@ -14,7 +16,7 @@
     font-size: 7rem;
     color: $secondary;
     padding: 1.5rem 0;
-    @include for-size(phone-only) {
+    @include for-size(iphone) {
       grid-column: 1;
       grid-row: 1;
       font-size: 3.5rem;
@@ -29,7 +31,7 @@
     display: block;
     text-align: center;
     justify-self: center;
-    @include for-size(phone-only) {
+    @include for-size(iphone) {
       grid-column: 1;
       grid-row: 2;
     }
@@ -38,7 +40,7 @@
       font-size: 24px;
       display: block;
       color: $accent;
-      @include for-size(phone-only) {
+      @include for-size(iphone) {
         margin: 0;
         padding: 0;
       }
@@ -46,7 +48,7 @@
 
     label {
       text-align: center;
-      @include for-size(phone-only) {
+      @include for-size(iphone) {
         margin: 0;
         padding: 0;
       }
@@ -65,7 +67,7 @@
       display: inline-block;
       text-align: center;
       color: $secondary;
-      @include for-size(phone-only) {
+      @include for-size(iphone) {
         margin: 0;
         padding: 0;
         height: 3rem;

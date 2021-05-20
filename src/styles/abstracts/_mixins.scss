@@ -79,7 +79,7 @@
 }
 
 @mixin for-size($size) {
-  @if $size == phone-only {
+  @if $size == iphone {
     @media (max-width: 599px) {
       @content;
     }

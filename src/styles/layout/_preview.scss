@@ -2,9 +2,7 @@
   grid-column: 1;
   grid-row: 3;
 
-  @include for-size(phone-only) {
-    // width: 431.95px;
-    // min-width: 431.95px;
+  @include for-size(iphone) {
     width: 100%;
   }
   li {
@@ -15,8 +13,4 @@
 .preview--image {
   margin: 0;
   padding: 0;
-
-  // @include for-size(phone-only) {
-  //   width: 100%;
-  // }
 }

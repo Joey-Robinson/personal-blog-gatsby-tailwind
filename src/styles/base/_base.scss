@@ -122,8 +122,8 @@ body {
   background: #1a1a1a;
   line-height: 1;
   scroll-behavior: smooth;
-  @include for-size(phone-only) {
-    width: 431.95px;
+  @include for-size(iphone) {
+    width: 828px;
   }
 }
 
