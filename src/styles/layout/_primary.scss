@@ -1,6 +1,7 @@
-.general {
-  @include respond(phone) {
-    grid-row: 2;
-    grid-column: 1;
-  }
+.primary {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  // @include for-size(phone-only) {
+  //   width: 431.95px;
+  // }
 }

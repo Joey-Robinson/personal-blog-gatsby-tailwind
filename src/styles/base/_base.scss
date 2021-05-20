@@ -109,8 +109,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -118,53 +118,18 @@ video {
   outline: 0;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
 body {
-  line-height: 1;
   background: #1a1a1a;
-  overflow-x: hidden;
+  line-height: 1;
   scroll-behavior: smooth;
-  font-weight: 300;
-  line-height: 1.4;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr;
-  @include respond(phone) {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+  @include for-size(phone-only) {
+    width: 431.95px;
   }
-}
-
-ol,
-ul {
-  list-style: none;
 }
 
 blockquote,
 q {
   quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
 }
 
 table {
@@ -200,7 +165,6 @@ video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  max-width: 100%;
 }
 
 audio:not([controls]) {
@@ -214,10 +178,8 @@ audio:not([controls]) {
 
 html {
   font-size: 100%; /* 1 */
-}
-
-a:focus {
-  outline: thin dotted;
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
 }
 
 a:active,
@@ -289,8 +251,6 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  *height: 13px; /* 3 */
-  *width: 13px; /* 3 */
 }
 
 input[type="search"] {

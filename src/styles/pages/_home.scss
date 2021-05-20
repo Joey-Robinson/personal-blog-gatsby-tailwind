@@ -1,9 +1,0 @@
-.home {
-  @include respond(phone) {
-    grid-row: 2;
-  }
-  h1 {
-    font-size: 7rem;
-    color: #ffed4a;
-  }
-}

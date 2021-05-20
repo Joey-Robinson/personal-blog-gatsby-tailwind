@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { getAllPosts } from "../components/blog/blog.api"
 import PostPreview from "../components/blog/blog.preview"
 import GlobalLayout from "../components/global/global.layout"
-import GlobalSearch from "../components/global/global.search"
+// import GlobalSearch from "../components/global/global.search"
 
 const Blog = ({ allPosts }) => {
   const morePosts = allPosts
@@ -37,7 +37,7 @@ const Blog = ({ allPosts }) => {
   return (
     <GlobalLayout className="blog">
       <>
-        <GlobalSearch
+        {/* <GlobalSearch
           onSubmit={(event) => event.preventDefault()}
           value={query}
           onChange={handleInputChange}
@@ -50,8 +50,8 @@ const Blog = ({ allPosts }) => {
           idFor="blog--search"
           submitStyle={{ display: "none" }}
         />
-        <h1 className="blog--heading">Stuff I Think, I Guess</h1>
-        <ul className="blog--ul">
+        <h1 className="blog--heading">Stuff I Think, I Guess</h1> */}
+        <ul className="blog--ul glory">
           {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
             const tagList = tags.map((tag) => (
               <li key={Math.random()}>

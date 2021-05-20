@@ -1,11 +1,12 @@
 .blog {
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
-  @include respond(phone) {
+  @include for-size(phone-only) {
     grid-template-columns: 1fr;
     grid-column: 1;
     grid-row: 2;
   }
+
   &--heading {
     grid-row: 1;
     grid-column: 2;
@@ -13,6 +14,13 @@
     font-size: 7rem;
     color: $secondary;
     padding: 1.5rem 0;
+    @include for-size(phone-only) {
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 3.5rem;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+    }
   }
   &--search {
     grid-row: 2;
@@ -21,16 +29,27 @@
     display: block;
     text-align: center;
     justify-self: center;
-
+    @include for-size(phone-only) {
+      grid-column: 1;
+      grid-row: 2;
+    }
     span {
       margin: 1rem 0;
       font-size: 24px;
       display: block;
       color: $accent;
+      @include for-size(phone-only) {
+        margin: 0;
+        padding: 0;
+      }
     }
 
     label {
       text-align: center;
+      @include for-size(phone-only) {
+        margin: 0;
+        padding: 0;
+      }
     }
     input {
       padding: 0;
@@ -46,6 +65,11 @@
       display: inline-block;
       text-align: center;
       color: $secondary;
+      @include for-size(phone-only) {
+        margin: 0;
+        padding: 0;
+        height: 3rem;
+      }
       &:placeholder-shown {
         text-align: center;
       }
@@ -53,15 +77,5 @@
         color: $secondary;
       }
     }
-  }
-  &--ul {
-    margin-top: 5rem;
-    grid-column: 2;
-    color: white;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
   }
 }

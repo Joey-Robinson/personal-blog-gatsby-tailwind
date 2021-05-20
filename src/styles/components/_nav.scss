@@ -3,17 +3,17 @@ nav {
   margin-right: 3rem;
   color: #1a1a1a;
   @include respond(phone) {
-    justify-self: center;
+    margin: 0;
   }
   ul {
     font-size: 3rem;
-    @include respond(phone) {
-      font-size: 4rem;
-    }
     display: flex;
     list-style: none;
     a {
       text-decoration: none;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
     }
     li {
       overflow: hidden;

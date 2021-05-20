@@ -1,19 +1,24 @@
 header {
   background: #818cf8;
   grid-row: 1;
-  // height: 6rem;
+  height: 5rem;
   display: grid;
   align-items: center;
   justify-items: end;
   @include respond(phone) {
-    grid-row: 1;
-    height: 10rem;
-    width: 100%;
-    display: grid;
-    align-items: center;
+    height: 5rem;
     justify-items: center;
   }
-  h1 {
-    align-self: center;
+}
+
+// 48
+.headerb {
+  background: #818cf8;
+  height: 5rem;
+  display: grid;
+  // align-items: center;
+  // justify-items: end;
+  @include for-size(phone-only) {
+    height: 5rem;
   }
 }

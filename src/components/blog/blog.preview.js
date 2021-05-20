@@ -1,7 +1,6 @@
 import Link from "next/link"
 // import { memo } from "react"
 import CoverImage from "./blog.coverimage"
-import Date from "./blog.date"
 
 const PostPreview = ({
   specialKey,
@@ -14,7 +13,7 @@ const PostPreview = ({
 }) => {
   const shortenedExcerpt = excerpt.slice(0, 150)
   return (
-    <li key={specialKey} className="preview">
+    <li key={specialKey} className="glory--preview preview">
       <h2 className="preview--heading">
         <Link as={`/blog/${slug}/`} href="/blog/[slug]/">
           <a className="underline">{title}</a>
@@ -23,13 +22,13 @@ const PostPreview = ({
       <div className="preview--date">
         <Date dateString={date} />
       </div>
-      <div className="preview--image">
+      <div style={{ width: "100%", height: "auto" }} className="preview--image">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
       <div className="preview--excerpt">
         <p>{shortenedExcerpt}</p>
       </div>
-      <ul className="preview--tags">{tags}</ul>
+      <ul className="--">{tags}</ul>
     </li>
   )
 }
