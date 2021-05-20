@@ -1,16 +1,13 @@
 .glory {
   grid-column: 1;
   grid-row: 3;
-
   @include for-size(iphone) {
-    width: 100%;
-  }
-  li {
-    // display: none;
+    width: 828px;
   }
 }
 
 .preview--image {
-  margin: 0;
-  padding: 0;
+  @include for-size(iphone) {
+    width: 828px;
+  }
 }

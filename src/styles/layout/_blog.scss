@@ -1,12 +1,10 @@
 .blog {
   display: grid;
-  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-columns: 1fr;
   @include for-size(iphone) {
-    grid-template-columns: 1fr;
     grid-column: 1;
     grid-row: 2;
-    // margin: 15rem;
-    margin-top: 15rem;
+    width: 828px;
   }
 
   &--heading {
@@ -19,7 +17,7 @@
     @include for-size(iphone) {
       grid-column: 1;
       grid-row: 1;
-      font-size: 3.5rem;
+      font-size: 1rem;
       padding: 0.75rem 1.5rem;
       text-align: center;
     }
@@ -32,6 +30,7 @@
     text-align: center;
     justify-self: center;
     @include for-size(iphone) {
+      width: 828px;
       grid-column: 1;
       grid-row: 2;
     }
