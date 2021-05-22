@@ -55,9 +55,9 @@ const Blog = ({ allPosts }) => {
           {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
             const tagList = tags.map((tag) => (
               <li key={Math.random()}>
-                <span aria-hidden="true">⸢</span>
+                <span aria-hidden="true">⸢ </span>
                 {tag}
-                <span aria-hidden="true">⸥</span>
+                <span aria-hidden="true"> ⸥</span>
               </li>
             ))
             return (
