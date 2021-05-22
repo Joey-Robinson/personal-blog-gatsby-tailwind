@@ -20,15 +20,13 @@ const PostPreview = ({
           <a className="underline">{title}</a>
         </Link>
       </h2>
-      <div className="listing--date">
+      <p className="listing--date">
         <Date dateString={date} />
-      </div>
+      </p>
       <div className="listing--image">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <div className="listing--excerpt">
-        <p>{shortenedExcerpt}</p>
-      </div>
+      <p className="listing--excerpt">{shortenedExcerpt}</p>
       <ul className="listing--tags">{tags}</ul>
     </li>
   )

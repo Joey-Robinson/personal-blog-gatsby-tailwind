@@ -1,6 +1,6 @@
 .blog {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 5vw 1fr 5vw;
   @include for-size(iphone) {
     grid-column: 1;
     grid-row: 2;
@@ -86,7 +86,7 @@
 
 .preview {
   margin-top: 5rem;
-  grid-column: 1;
+  grid-column: 2;
   color: white;
   list-style: none;
   display: flex;
