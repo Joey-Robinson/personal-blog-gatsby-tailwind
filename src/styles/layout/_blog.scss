@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
   @include for-size(iphone) {
+    grid-template-columns: 1fr;
     grid-column: 1;
     grid-row: 2;
-    width: 828px;
     margin: 3.5rem 0 0 0;
   }
 
@@ -15,12 +15,10 @@
     font-size: 7rem;
     color: $secondary;
     padding: 1.5rem 0;
-    @include for-size(iphone) {
+    @include respond(phone) {
       grid-column: 1;
       grid-row: 1;
       font-size: 5rem;
-      padding: 0.75rem 1.5rem;
-      text-align: center;
     }
   }
   &--search {
@@ -31,7 +29,6 @@
     text-align: center;
     justify-self: center;
     @include for-size(iphone) {
-      width: 828px;
       grid-column: 1;
       grid-row: 2;
       margin: 1.5rem 0 0 0;
@@ -89,8 +86,11 @@
   grid-column: 2;
   color: white;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include for-size(iphone) {
+    grid-column: 1;
+    width: 828px;
+    grid-template-columns: 1fr;
+  }
 }

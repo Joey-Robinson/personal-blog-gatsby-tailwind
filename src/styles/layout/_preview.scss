@@ -4,20 +4,18 @@
   flex-direction: column;
   width: 800px;
   margin: 0 1.5rem 4.5rem 1.5rem;
-  &--heading a {
-    font-size: 3.5rem;
+  &--heading {
     grid-template-columns: 1fr;
-    text-decoration: underline;
-    color: #ffed4a;
+    font-size: 3.5rem;
+    a {
+      text-decoration: underline;
+      color: #ffed4a;
+    }
     @include for-size(iphone) {
-      font-size: 3.5rem;
       text-align: center;
+      font-size: 3.5rem;
     }
   }
-  @include for-size(iphone) {
-    width: 828px;
-  }
-
   &--date {
     font-size: 20px;
     margin: 0.75rem 0;
@@ -42,6 +40,9 @@
     list-style: none;
     margin: 1.5rem 0 0 0;
     display: flex;
+    @include for-size(iphone) {
+      display: none;
+    }
     li {
       background: lighten($accent, 10%);
       color: #1a1a1a;
