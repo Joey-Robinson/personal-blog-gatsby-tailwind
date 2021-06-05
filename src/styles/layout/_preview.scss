@@ -47,7 +47,7 @@
     margin: 1.5rem 0 0 0;
     display: flex;
     @include for-size(iphone) {
-      justify-content: space-between;
+      justify-content: space-evenly;
     }
     li {
       background: lighten($accent, 10%);
@@ -56,9 +56,9 @@
       padding: 6px 14px;
       border-radius: 50px;
       @include respond(phone) {
-        font-size: 24px;
+        font-size: 20px;
         // padding: 5px 20px;
-        margin: 1.5rem 1.5rem 0 0;
+        margin: 0;
       }
     }
   }

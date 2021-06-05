@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
   @include for-size(iphone) {
-    height: 600vh;
-
     grid-template-columns: 1fr;
     grid-column: 1;
     grid-row: 2;
