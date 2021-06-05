@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
   @include for-size(iphone) {
+    height: 600vh;
+
     grid-template-columns: 1fr;
     grid-column: 1;
     grid-row: 2;
@@ -39,6 +41,7 @@
       display: block;
       color: $accent;
       @include for-size(iphone) {
+        font-size: 2.4rem;
         margin: 0;
         padding: 0;
       }
@@ -69,7 +72,8 @@
       @include for-size(iphone) {
         margin: 1.5rem 0;
         padding: 0;
-        height: 3.75rem;
+        height: 5rem;
+        width: 34rem;
       }
       &:placeholder-shown {
         text-align: center;
@@ -90,7 +94,6 @@
   grid-template-columns: 1fr 1fr;
   @include for-size(iphone) {
     grid-column: 1;
-    width: 828px;
     grid-template-columns: 1fr;
   }
 }

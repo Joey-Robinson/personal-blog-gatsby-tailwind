@@ -4,6 +4,9 @@
   flex-direction: column;
   width: 800px;
   margin: 0 1.5rem 4.5rem 1.5rem;
+  @include for-size(iphone) {
+    margin: 3rem 1.5rem;
+  }
   &--heading {
     grid-template-columns: 1fr;
     font-size: 3.5rem;
@@ -35,13 +38,16 @@
   &--excerpt {
     font-size: 22px;
     color: $secondary;
+    @include for-size(iphone) {
+      font-size: 2.2rem;
+    }
   }
   &--tags {
     list-style: none;
     margin: 1.5rem 0 0 0;
     display: flex;
     @include for-size(iphone) {
-      display: none;
+      justify-content: space-between;
     }
     li {
       background: lighten($accent, 10%);
@@ -51,8 +57,8 @@
       border-radius: 50px;
       @include respond(phone) {
         font-size: 24px;
-        padding: 5px 20px;
-        margin: 3rem 3rem 0 0;
+        // padding: 5px 20px;
+        margin: 1.5rem 1.5rem 0 0;
       }
     }
   }
