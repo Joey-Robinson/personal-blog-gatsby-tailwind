@@ -1,12 +1,12 @@
-import GlobalLayout from "../components/global/global.layout"
+import React from "react"
+import Layout from "../components/global/global.layout"
 
 const Contact = () => (
-  <GlobalLayout className="contact">
-    <h1>From Contact</h1>
-    <a href="/assets/Joey_Robinson_Resume.pdf" download>
-      Download Resume
-    </a>
-  </GlobalLayout>
+  <Layout>
+    <div>
+      <h1>From Contact</h1>
+    </div>
+  </Layout>
 )
 
 export default Contact

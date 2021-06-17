@@ -1,19 +1,4 @@
 header {
-  background: #818cf8;
-  grid-row: 1;
-  height: 5rem;
-  display: grid;
-  align-items: center;
-  justify-items: end;
-  // @include for-size(iphone) {
-  //   height: 9.5rem;
-  //   justify-content: center;
-  // }
-  // nav {
-  //   ul {
-  //     @include for-size(iphone) {
-  //       font-size: 4.7rem;
-  //     }
-  //   }
-  // }
+  grid-column: 2;
+  grid-row: 2;
 }
