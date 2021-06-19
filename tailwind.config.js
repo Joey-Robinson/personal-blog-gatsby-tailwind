@@ -16,30 +16,25 @@ module.exports = {
       DEFAULT: {
         css: {
           h2: {
-            color: "#ffff00",
-            fontSize: "2rem",
-            margin: "2rem 0 0 0",
+            margin: "1rem 0 0 0",
             padding: ".75rem 0",
           },
           h3: {
-            color: "#ffff00",
-            fontSize: "1.75rem",
-            margin: "1.5rem 0 0 0",
+            margin: "1rem 0 0 0",
+            padding: ".75rem 0",
+          },
+          h4: {
+            margin: "1rem 0 0 0",
+            padding: ".75rem 0",
+          },
+          h5: {
+            margin: "1rem 0 0 0",
             padding: ".75rem 0",
           },
           p: {
             color: "#A3ADC7",
             fontSize: "1.5rem",
             padding: ".5rem 0",
-          },
-          a: {
-            color: "#000",
-            "&:hover": {
-              color: "#2c5282",
-            },
-          },
-          ol: {
-            listStyle: "square",
           },
         },
       },
