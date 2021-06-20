@@ -8,8 +8,8 @@ const blogPosts = ({ data, pageContext }) => {
   const title = data.mdx.frontmatter.title
   const date = data.mdx.frontmatter.date
   const body = data.mdx.body
-  console.log(pageContext.previous.node.frontmatter.title)
-  console.log(pageContext.next)
+
+  // Links to Previous || Next blog post
   const lastTitle = pageContext.previous.node.frontmatter.title
   const last = pageContext.previous.node.fields.slug
   return (
@@ -21,16 +21,28 @@ const blogPosts = ({ data, pageContext }) => {
         <MDXRenderer>{body}</MDXRenderer>
       </article>
 
-      <div className="my-6">
-        <Link className="text-2xl text-link" to={last}>
-          &larr; {lastTitle}
-        </Link>
+      <div className="bottom my-6">
+        {pageContext.previous === null ? (
+          <div></div>
+        ) : (
+          <div>
+            <Link className="text-xl text-link" to={last} rel="previous">
+              &larr; {lastTitle}
+            </Link>
+          </div>
+        )}
         {pageContext.next === null ? (
           <div></div>
         ) : (
-          <Link to={pageContext.next.node.fields.slug} rel="next">
-            {pageContext.next.node.frontmatter.title}
-          </Link>
+          <div>
+            <Link
+              className="text-xl text-link"
+              to={pageContext.next.node.fields.slug}
+              rel="next"
+            >
+              {pageContext.next.node.frontmatter.title} &rarr;
+            </Link>
+          </div>
         )}
       </div>
     </Layout>
