@@ -3,7 +3,7 @@ import React from "react"
 
 const Navigation = () => (
   <nav className="mt-4">
-    <ul className="space-x-16 text-xl text-link">
+    <ul className="flex space-x-16 text-xl text-link">
       <li>
         <Link to="/">Home</Link>
       </li>

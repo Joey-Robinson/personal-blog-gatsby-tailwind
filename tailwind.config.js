@@ -12,6 +12,20 @@ module.exports = {
       paragraph: "#A3ADC7",
       secondaryLink: "#606d7f",
     },
+    gridTemplateColumns: {
+      main: "1fr 2fr 1fr",
+      phone: "1fr",
+    },
+    gridTemplateRows: {
+      main: "5vh 5vh 5vh 1fr",
+    },
+    screens: {
+      xxl: "640px",
+      xl: "769px",
+      lg: "1024px",
+      md: "1280px",
+      sm: "1536px",
+    },
     typography: {
       DEFAULT: {
         css: {

@@ -21,7 +21,7 @@ const blogPosts = ({ data, pageContext }) => {
         <MDXRenderer>{body}</MDXRenderer>
       </article>
 
-      <div className="bottom my-6">
+      <div className="flex justify-between my-6">
         {pageContext.previous === null ? (
           <div></div>
         ) : (
