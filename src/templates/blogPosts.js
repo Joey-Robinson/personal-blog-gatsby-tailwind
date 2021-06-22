@@ -4,7 +4,6 @@ import React from "react"
 import Layout from "../components/global/global.layout"
 
 const blogPosts = ({ data, pageContext }) => {
-  // const post = data.mdx
   const title = data.mdx.frontmatter.title
   const date = data.mdx.frontmatter.date
   const body = data.mdx.body
@@ -28,7 +27,11 @@ const blogPosts = ({ data, pageContext }) => {
           <div></div>
         ) : (
           <div>
-            <Link className="text-xl text-link" to={last} rel="previous">
+            <Link
+              className="text-xl text-link mb:text-sm xxl:text-xl"
+              to={last}
+              rel="previous"
+            >
               &larr; {lastTitle}
             </Link>
           </div>
@@ -36,9 +39,11 @@ const blogPosts = ({ data, pageContext }) => {
         {pageContext.next === null ? (
           <div></div>
         ) : (
+          // The Next Link needs to be drilled down or Gatsby throws
+          // An error of pageContext.next is null, even defining as a variable
           <div>
             <Link
-              className="text-xl text-link"
+              className="text-xl text-link mb:text-sm xxl:text-xl"
               to={pageContext.next.node.fields.slug}
               rel="next"
             >
