@@ -14,41 +14,35 @@ module.exports = {
     },
     gridTemplateColumns: {
       main: "1fr 2fr 1fr",
+      laptop: "10vw 5fr 10vw",
       phone: "1fr",
     },
     gridTemplateRows: {
       main: "5vh 5vh 5vh 1fr",
     },
     screens: {
+      mb: "1px",
+      xfl: "414px",
       xxl: "640px",
       xl: "769px",
       lg: "1024px",
       md: "1280px",
+      lpt: "1440px",
       sm: "1536px",
     },
     typography: {
       DEFAULT: {
         css: {
           h2: {
-            margin: "1rem 0 0 0",
-            padding: ".75rem 0",
+            margin: "",
+            padding: "",
           },
-          h3: {
-            margin: "1rem 0 0 0",
-            padding: ".75rem 0",
-          },
-          h4: {
-            margin: "1rem 0 0 0",
-            padding: ".75rem 0",
-          },
-          h5: {
-            margin: "1rem 0 0 0",
-            padding: ".75rem 0",
-          },
+          h3: {},
+          h4: {},
+          h5: {},
           p: {
             color: "#A3ADC7",
             fontSize: "1.5rem",
-            padding: ".5rem 0",
           },
         },
       },

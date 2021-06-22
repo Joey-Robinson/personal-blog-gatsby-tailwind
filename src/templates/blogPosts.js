@@ -14,14 +14,16 @@ const blogPosts = ({ data, pageContext }) => {
   const last = pageContext.previous.node.fields.slug
   return (
     <Layout>
-      <h1 className="text-aux text-5xl mt-8 mb-1">{title}</h1>
-      <p className="text-xl text-paragraphn">{date}</p>
+      <h1 className="text-secondaryLink text-5xl font-semibold xfl:pl-4 xfl:pr-4 xfl:mt-6">
+        {title}
+      </h1>
+      <p className="text-xl text-secondary mb:pl-5 mb:pr-4 mb:mt-3">{date}</p>
 
       <article className="prose">
         <MDXRenderer>{body}</MDXRenderer>
       </article>
 
-      <div className="flex justify-between my-6">
+      <div className="flex justify-between my-6 mb:mx-4">
         {pageContext.previous === null ? (
           <div></div>
         ) : (

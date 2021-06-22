@@ -12,10 +12,10 @@ export default function Home({ data, location }) {
   return (
     <Layout>
       <SEO title={siteTitle} description={siteDescription} />
-      <h1 className="text-secondaryLink mt-18 text-5xl font-semibold mt-4">
+      <h1 className="text-secondaryLink text-5xl font-semibold mb:pl-4 mb:pr-4 mb:mt-2">
         Blog
       </h1>
-      <ul className="list-none mt-12 mb-12">
+      <ul className="list-none mt-8 mb-12">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title
           const image = node.frontmatter.cover.childImageSharp.fluid

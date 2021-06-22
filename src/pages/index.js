@@ -3,10 +3,10 @@ import Layout from "../components/global/global.layout"
 
 const Home = () => (
   <Layout>
-    <h1 className="text-secondaryLink mt-18 text-5xl font-semibold mt-4">
+    <h1 className="text-secondaryLink text-5xl font-semibold mb:pl-4 mb:pr-4 mb:mt-2">
       Home
     </h1>
-    <p className="text-2xl text-secondary">
+    <p className="text-2xl text-secondary mb:pl-4 mb:pr-4 mb:mt-4 mb:mb-12">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis
       voluptates enim libero itaque sit? Facilis quidem beatae aut, quisquam
       odio animi reprehenderit maxime. Ex nemo nisi neque natus molestias sint
