@@ -3,11 +3,36 @@ import Layout from "../components/global/global.layout"
 
 const Home = () => (
   <Layout>
-    <h1 className="text-secondaryLink text-5xl sm:mt-4 font-semibold mb:pl-4 mb:pr-4 mb:mt-12">
+    <h1
+      className="
+    text-secondaryLink
+    font-semibold
+    text-5xl
+    mb:pl-3
+    mb:pr-3
+    mb:mt-10
+    smp:mt-10
+    xfl:pl-3
+    xfl:pr-3
+    xfl:mt-10
+    lpt:mt-10
+    lpt:px-3"
+    >
       Home
     </h1>
-    <div className="grid grid-rows-pp mb:mt-6 mt-12">
-      <p className="text-2xl text-secondary mb:pl-4 mb:pr-4 mb:mt-4 mb:mb-12 row-span-3 self-center">
+    <div className="grid grid-rows-pp ">
+      <p
+        className="
+      text-2xl
+      text-secondary
+      row-span-3
+      self-center
+      mb:text-aux
+      mb:px-4
+      mb:mt-4
+      mb:mb-6
+      "
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis
         voluptates enim libero itaque sit? Facilis quidem beatae aut, quisquam
         odio animi reprehenderit maxime. Ex nemo nisi neque natus molestias sint

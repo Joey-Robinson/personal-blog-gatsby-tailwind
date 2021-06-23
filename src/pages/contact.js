@@ -3,7 +3,21 @@ import Layout from "../components/global/global.layout"
 
 const Contact = () => (
   <Layout>
-    <h1 className="text-secondaryLink text-5xl sm:mt-4 font-semibold mb:pl-4 mb:pr-4 mb:mt-12">
+    <h1
+      className="
+    text-secondaryLink
+    font-semibold
+    text-5xl
+    mb:pl-3
+    mb:pr-3
+    mb:mt-10
+    smp:mt-10
+    xfl:pl-3
+    xfl:pr-3
+    xfl:mt-10
+    lpt:mt-10
+    lpt:px-3"
+    >
       Contact
     </h1>
     {/* Todo: Create form, I guess */}

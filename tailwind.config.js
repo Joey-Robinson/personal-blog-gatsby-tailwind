@@ -14,6 +14,7 @@ module.exports = {
     },
     gridTemplateColumns: {
       main: "1fr 2fr 1fr",
+      tab: "5vw 4fr 5vw",
       laptop: "10vw 5fr 10vw",
       phone: "1fr",
     },
@@ -23,9 +24,10 @@ module.exports = {
     },
     screens: {
       mb: "1px",
+      smp: "375px",
       xfl: "414px",
       xxl: "640px",
-      xl: "769px",
+      xl: "768px",
       lg: "1024px",
       md: "1280px",
       lpt: "1440px",
