@@ -19,6 +19,7 @@ module.exports = {
     },
     gridTemplateRows: {
       main: "5vh 5vh 5vh 1fr",
+      pp: "20vh 20vh",
     },
     screens: {
       mb: "1px",

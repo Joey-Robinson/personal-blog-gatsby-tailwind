@@ -3,11 +3,12 @@ import Layout from "../components/global/global.layout"
 
 const Contact = () => (
   <Layout>
-    <h1 className="text-secondaryLink text-5xl font-semibold mb:pl-4 mb:pr-4 mb:mt-2">
+    <h1 className="text-secondaryLink text-5xl sm:mt-4 font-semibold mb:pl-4 mb:pr-4 mb:mt-12">
       Contact
     </h1>
-    <div className="grid mt-12">
-      <p className="text-2xl text-secondary mb:pl-4 mb:pr-4 mb:mt-4 mb:mb-12">
+    {/* Todo: Create form, I guess */}
+    <div className="grid grid-rows-pp mb:mt-6 mt-12">
+      <p className="text-2xl text-secondary mb:pl-4 mb:pr-4 mb:mt-4 mb:mb-12 row-span-3 self-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis
         voluptates enim libero itaque sit? Facilis quidem beatae aut, quisquam
         odio animi reprehenderit maxime. Ex nemo nisi neque natus molestias sint
