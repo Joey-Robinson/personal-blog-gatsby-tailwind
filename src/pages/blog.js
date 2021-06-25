@@ -1,17 +1,54 @@
-import { graphql } from "gatsby"
-import React from "react"
-import BlogPreview from "../components/blog/blog.preview"
-import Layout from "../components/global/global.layout"
-import SEO from "../components/seo"
+import React, { useState } from "react"
+import { getAllPosts } from "../components/blog/blog.api"
+import PostPreview from "../components/blog/blog.preview"
+import GlobalLayout from "../components/global/global.layout"
+// import GlobalSearch from "../components/global/global.search"
 
-export default function Home({ data, location }) {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const siteDescription = data.site.siteMetadata.description
-  const posts = data.allMdx.edges
+const Blog = ({ allPosts }) => {
+  const morePosts = allPosts
+  const emptyQuery = ""
+  const [filteredPosts, setFilteredPosts] = useState({
+    filteredData: [],
+    query: emptyQuery,
+  })
 
+  const handleInputChange = (event) => {
+    event.preventDefault()
+    const query = event.target.value
+    const posts = morePosts || []
+
+    const filteredData = posts.filter((post) => {
+      const { title, tags } = post
+      return (
+        title.toLowerCase().includes(query.toLowerCase()) ||
+        tags.join("").toLowerCase().includes(query.toLowerCase())
+      )
+    })
+
+    setFilteredPosts({
+      query,
+      filteredData,
+    })
+  }
+
+  const { filteredData, query } = filteredPosts
+  const hasSearchResults = filteredData && query !== emptyQuery
+  const posts = hasSearchResults ? filteredData : morePosts
   return (
-    <Layout>
-      <SEO title={siteTitle} description={siteDescription} />
+    <GlobalLayout>
+      {/* <GlobalSearch
+          onSubmit={(event) => event.preventDefault()}
+          value={query}
+          onChange={handleInputChange}
+          className="blog--search"
+          placeholder="Search Blog"
+          id="blog--search"
+          spanText="Search Blog"
+          ariaLabel="Search Blog"
+          label="Search Blog"
+          idFor="blog--search"
+          submitStyle={{ display: "none" }}
+        /> */}
       <h1
         className="
     text-secondaryLink
@@ -29,67 +66,48 @@ export default function Home({ data, location }) {
       >
         Blog
       </h1>
-      <ul className="list-none mt-8 mb-12">
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title
-          const image = node.frontmatter.cover.childImageSharp.fluid
-          const url = node.frontmatter.cover.publicURL
-          const date = node.frontmatter.date
-          const description = node.frontmatter.description
-          const slug = node.fields.slug
+      <ul className="list-none mb-12 grid">
+        {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
+          const tagList = tags.map((tag) => (
+            <li key={Math.random()}>
+              <span aria-hidden="true">⸢ </span>
+              {tag}
+              <span aria-hidden="true"> ⸥</span>
+            </li>
+          ))
           return (
             <>
-              <BlogPreview
-                to={slug}
+              <PostPreview
+                tags={tagList}
+                key={title}
                 title={title}
                 date={date}
-                description={description}
-                src={image}
-                alt={title}
-                url={url}
+                excerpt={excerpt}
+                coverImage={coverImage}
+                slug={slug}
               />
             </>
           )
         })}
       </ul>
-    </Layout>
+    </GlobalLayout>
   )
 }
 
-export const pageQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          excerpt
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            cover {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                  originalImg
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+    "tags",
+  ])
+
+  return {
+    props: { allPosts },
   }
-`
+}
+
+export default Blog

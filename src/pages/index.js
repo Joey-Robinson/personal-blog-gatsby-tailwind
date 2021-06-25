@@ -1,8 +1,7 @@
-import React from "react"
-import Layout from "../components/global/global.layout"
+import GlobalLayout from "../components/global/global.layout"
 
 const Home = () => (
-  <Layout>
+  <GlobalLayout className="general">
     <h1
       className="
     text-secondaryLink
@@ -27,7 +26,6 @@ const Home = () => (
       text-secondary
       row-span-3
       self-center
-      mb:text-aux
       mb:px-4
       mb:mt-4
       mb:mb-6
@@ -46,7 +44,7 @@ const Home = () => (
         doloremque eligendi esse odio, voluptatem sapiente illo expedita.
       </p>
     </div>
-  </Layout>
+  </GlobalLayout>
 )
 
 export default Home

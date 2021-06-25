@@ -1,22 +1,37 @@
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import React from "react"
+// import { memo } from "react"
+import Link from "next/link"
+import CoverImage from "./blog.coverimage"
+import Date from "./blog.date"
 
-const BlogPreview = ({ to, title, alt, date, description, src, url }) => {
+const PostPreview = ({
+  specialKey,
+  tags,
+  title,
+  coverImage,
+  date,
+  excerpt,
+  slug,
+}) => {
+  const shortenedExcerpt = excerpt.slice(0, 150)
   return (
-    <li className="my-10" key={date}>
+    <li key={specialKey} className="my-10">
       <h3 className="text-2xl text-link font-medium mb:pl-4 mb:pr-4">
-        <Link to={to}>{title} &rarr;</Link>
+        <Link as={`/blog/${slug}/`} href="/blog/[slug]/">
+          <a>{title}</a>
+        </Link>
       </h3>
-      <p className="my-1 text-aux mb:pl-4 mb:pr-4">{date}</p>
+      <p className="my-1 text-aux mb:pl-4 mb:pr-4">
+        <Date dateString={date} />
+      </p>
       <div className="mt-2 mb-2 mb:pl-4 mb:pr-4 ">
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <Img fluid={src} alt={alt} />
-        </a>
+        <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <p className="text-lg text-paragraph mb:pl-4 mb:pr-4 ">{description}</p>
+      <p className="text-lg text-paragraph mb:pl-4 mb:pr-4">
+        {shortenedExcerpt}
+      </p>
+      {/* <ul className="listing--tags">{tags}</ul> */}
     </li>
   )
 }
 
-export default BlogPreview
+export default PostPreview
