@@ -1,18 +1,18 @@
 // import { memo } from "react"
+import Image from "next/image"
 import Link from "next/link"
-import CoverImage from "./blog.coverimage"
 import Date from "./blog.date"
 
 const PostPreview = ({
   specialKey,
   tags,
   title,
-  coverImage,
+  image,
   date,
   excerpt,
   slug,
 }) => {
-  const shortenedExcerpt = excerpt.slice(0, 150)
+  // const shortenedExcerpt = excerpt.slice(0, 150)
   return (
     <li key={specialKey} className="my-10">
       <h3 className="text-2xl text-link font-medium mb:pl-4 mb:pr-4">
@@ -24,10 +24,17 @@ const PostPreview = ({
         <Date dateString={date} />
       </p>
       <div className="mt-2 mb-2 mb:pl-4 mb:pr-4 ">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <Image
+          slug={slug}
+          title={title}
+          src={image}
+          quality="100"
+          width={800}
+          height={500}
+        />
       </div>
-      <p className="text-lg text-paragraph mb:pl-4 mb:pr-4">
-        {shortenedExcerpt}
+      <p className="text-lg text-paragraph mb:pl-4 mb:pr-4 w-11/12">
+        {excerpt}
       </p>
       {/* <ul className="listing--tags">{tags}</ul> */}
     </li>

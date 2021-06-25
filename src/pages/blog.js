@@ -67,7 +67,7 @@ const Blog = ({ allPosts }) => {
         Blog
       </h1>
       <ul className="list-none mb-12 grid">
-        {posts.map(({ tags, title, date, excerpt, coverImage, slug }) => {
+        {posts.map(({ coverImage, tags, title, date, excerpt, slug }) => {
           const tagList = tags.map((tag) => (
             <li key={Math.random()}>
               <span aria-hidden="true">⸢ </span>
@@ -83,7 +83,7 @@ const Blog = ({ allPosts }) => {
                 title={title}
                 date={date}
                 excerpt={excerpt}
-                coverImage={coverImage}
+                image={coverImage}
                 slug={slug}
               />
             </>
