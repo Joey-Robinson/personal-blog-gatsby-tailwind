@@ -1,4 +1,5 @@
 import ErrorPage from "next/error"
+import Link from "next/link"
 import { useRouter } from "next/router"
 import { getAllPosts, getPostBySlug } from "../../components/blog/blog.api"
 import PostBody from "../../components/blog/blog.main"
@@ -14,9 +15,11 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <GlobalLayout className="read">
-        <button className="read--back" onClick={() => router.back()}>
-          <span aria-hidden="true">&laquo;</span>
-        </button>
+        <div className="bg-link w-8 h-8 grid justify-items-center items-center">
+          <Link className="mb-4" href="/blog" onClick={() => router.back()}>
+            <a>&laquo;</a>
+          </Link>
+        </div>
         {router.isFallback ? (
           <div>Loading…</div>
         ) : (

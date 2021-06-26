@@ -3,6 +3,7 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme("colors"),
       primary: "#1a202c",
+      link: "#9f7aea",
     }),
     textColor: {
       primary: "#b6bfca",
@@ -36,6 +37,11 @@ module.exports = {
     typography: {
       DEFAULT: {
         css: {
+          h1: {
+            fontWeight: "600",
+            fontSize: "3.5rem",
+            color: "#606d7f",
+          },
           h2: {
             margin: "",
             padding: "",
@@ -44,11 +50,13 @@ module.exports = {
           h4: {},
           h5: {},
           p: {
+            padding: "1rem 0",
             color: "#A3ADC7",
-            fontSize: "1.5rem",
+            fontSize: "20px",
           },
         },
       },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 }

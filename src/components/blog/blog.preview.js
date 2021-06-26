@@ -31,11 +31,10 @@ const PostPreview = ({
           quality="100"
           width={800}
           height={500}
+          layout="responsive"
         />
       </div>
-      <p className="text-lg text-paragraph mb:pl-4 mb:pr-4 w-11/12">
-        {excerpt}
-      </p>
+      <p className="text-xl text-paragraph mb:pl-4 mb:pr-4">{excerpt}</p>
       {/* <ul className="listing--tags">{tags}</ul> */}
     </li>
   )
