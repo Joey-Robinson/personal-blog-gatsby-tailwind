@@ -39,16 +39,20 @@ module.exports = {
         css: {
           h1: {
             fontWeight: "600",
-            fontSize: "3.5rem",
+            fontSize: "3rem",
             color: "#606d7f",
+            margin: "2rem 0 0 0",
+            color: "#ffff00",
           },
           h2: {
+            fontSize: "2.75rem",
             margin: "",
             padding: "",
+            color: "#ffff00",
           },
-          h3: {},
-          h4: {},
-          h5: {},
+          h3: { color: "#ffff00", fontSize: "2.5rem" },
+          h4: { color: "#ffff00", fontSize: "2.25rem" },
+          h5: { color: "#ffff00", fontSize: "2rem" },
           p: {
             padding: "1rem 0",
             color: "#A3ADC7",

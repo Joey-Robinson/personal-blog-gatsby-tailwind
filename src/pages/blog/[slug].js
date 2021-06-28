@@ -15,11 +15,20 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <GlobalLayout className="read">
-        <div className="bg-link w-8 h-8 grid justify-items-center items-center">
-          <Link className="mb-4" href="/blog" onClick={() => router.back()}>
-            <a>&laquo;</a>
-          </Link>
-        </div>
+        <Link href="/blog" onClick={() => router.back()}>
+          <a
+            className="
+              mb:bg-link
+              mb:text-aux
+                mb:fixed
+                mb:px-1
+                mb:py-1
+                mb:top-0
+                mb:right-0"
+          >
+            &larr; Blog
+          </a>
+        </Link>
         {router.isFallback ? (
           <div>Loading…</div>
         ) : (
