@@ -11,6 +11,7 @@ const PostPreview = ({
   date,
   excerpt,
   slug,
+  me,
 }) => {
   // const shortenedExcerpt = excerpt.slice(0, 150)
   return (
@@ -35,7 +36,7 @@ const PostPreview = ({
         />
       </div>
       <p className="text-xl text-paragraph mb:pl-4 mb:pr-4">{excerpt}</p>
-      <ul className="flex mt-3">{tags}</ul>
+      <ul className="flex mt-3 ml-2">{tags}</ul>
     </li>
   )
 }
