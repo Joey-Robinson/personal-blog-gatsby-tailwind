@@ -3,7 +3,6 @@ title: "Cowboys galore."
 excerpt: "From it's iconic characters, settings ands music, Cowboy Bebop has become a staple among veteran and beginner anime fans."
 description: "From it's iconic characters, settings ands music, Cowboy Bebop has become a staple among veteran and beginner anime fans."
 date: "2018-03-16"
-value: 2
 author:
   name: Joey Robinson
 coverImage: "/assets/blog/cbi.jpg"

@@ -7,7 +7,6 @@ excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 cupiditate aperiam itaque laboriosam illum, minus vel reiciendis,"
 description: "Don't fear the wolf. Sometimes, the wolf isn't the villain and it's actually the woman in red who's out for blood. Jin-Roh is an example of this and serves as a learning exercise in such matters."
 coverImage: "/assets/blog/smugkaguya.jpg"
-value: 3
 ogImage:
   url: "/assets/blog/smugkaguya.jpg"
 tags:
