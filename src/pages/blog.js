@@ -69,7 +69,7 @@ const Blog = ({ allPosts }) => {
       <ul className="list-none mb-12 grid">
         {posts.map(({ coverImage, tags, title, date, excerpt, slug }) => {
           const tagList = tags.map((tag) => (
-            <li key={Math.random()}>
+            <li className="px-2 py-1 bg-link mx-2">
               <span aria-hidden="true">⸢ </span>
               {tag}
               <span aria-hidden="true"> ⸥</span>
