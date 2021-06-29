@@ -4,9 +4,11 @@ module.exports = {
       ...theme("colors"),
       primary: "#1a202c",
       link: "#9f7aea",
+      input: "#606d7f",
     }),
     textColor: {
       primary: "#b6bfca",
+      label: "#1a202c",
       secondary: "#ffffff",
       link: "#9f7aea",
       aux: "#ffff00",
@@ -57,6 +59,10 @@ module.exports = {
             padding: "1rem 0",
             color: "#ffff00",
             fontSize: "20px",
+          },
+          img: {
+            width: "100%",
+            margin: "1rem 0",
           },
         },
       },

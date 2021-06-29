@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { getAllPosts } from "../components/blog/blog.api"
 import PostPreview from "../components/blog/blog.preview"
 import GlobalLayout from "../components/global/global.layout"
-// import GlobalSearch from "../components/global/global.search"
+import GlobalSearch from "../components/global/global.search"
 
 const Blog = ({ allPosts }) => {
   const morePosts = allPosts
@@ -36,19 +36,6 @@ const Blog = ({ allPosts }) => {
   const posts = hasSearchResults ? filteredData : morePosts
   return (
     <GlobalLayout>
-      {/* <GlobalSearch
-          onSubmit={(event) => event.preventDefault()}
-          value={query}
-          onChange={handleInputChange}
-          className="blog--search"
-          placeholder="Search Blog"
-          id="blog--search"
-          spanText="Search Blog"
-          ariaLabel="Search Blog"
-          label="Search Blog"
-          idFor="blog--search"
-          submitStyle={{ display: "none" }}
-        /> */}
       <h1
         className="
     text-secondaryLink
@@ -66,6 +53,18 @@ const Blog = ({ allPosts }) => {
       >
         Blog
       </h1>
+      <GlobalSearch
+        onSubmit={(event) => event.preventDefault()}
+        value={query}
+        onChange={handleInputChange}
+        placeholder="Search Blog"
+        id="blog--search"
+        spanText="Search Blog"
+        ariaLabel="Search Blog"
+        label="Search Blog"
+        idFor="blog--search"
+        submitStyle={{ display: "none" }}
+      />
       <ul className="list-none mb-12 grid">
         {posts.map(({ coverImage, tags, title, date, excerpt, slug }) => {
           const tagList = tags.map((tag) => (
@@ -78,6 +77,7 @@ const Blog = ({ allPosts }) => {
           return (
             <>
               <PostPreview
+                me={Math.random()}
                 tags={tagList}
                 title={title}
                 date={date}

@@ -36,7 +36,9 @@ const PostPreview = ({
         />
       </div>
       <p className="text-xl text-paragraph mb:pl-4 mb:pr-4">{excerpt}</p>
-      <ul className="flex mt-3 ml-2">{tags}</ul>
+      <ul key={me} className="flex mt-3 ml-2">
+        {tags}
+      </ul>
     </li>
   )
 }

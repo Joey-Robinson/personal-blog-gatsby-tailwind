@@ -1,0 +1,8 @@
+input {
+  &:placeholder-shown {
+    text-align: center;
+  }
+  &::placeholder {
+    color: #ffff00;
+  }
+}
