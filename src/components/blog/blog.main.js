@@ -1,7 +1,10 @@
 const PostBody = ({ content }) => {
   return (
     <>
-      <article dangerouslySetInnerHTML={{ __html: content }} />
+      <article
+        className="prose prose-xl px-4 max-w-none mb-6"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </>
   )
 }
