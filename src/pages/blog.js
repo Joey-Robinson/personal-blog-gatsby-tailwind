@@ -78,7 +78,6 @@ const Blog = ({ allPosts }) => {
           return (
             <>
               <PostPreview
-                specialKey={tags}
                 tags={tagList}
                 title={title}
                 date={date}
