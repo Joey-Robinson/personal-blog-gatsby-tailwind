@@ -25,6 +25,12 @@ const PostPreview = ({
       <p className="my-1 text-aux mb:pl-4 mb:pr-4">
         <Date dateString={date} />
       </p>
+      <ul
+        key={me}
+        className="flex flex-wrap smp:justify-evenly sm:justify-start sm:ml-2 sm:my-3"
+      >
+        {tags}
+      </ul>
       <div className="mt-2 mb-2 mb:pl-4 mb:pr-4 ">
         <Image
           slug={slug}
@@ -37,9 +43,6 @@ const PostPreview = ({
         />
       </div>
       <p className="text-xl text-paragraph mb:pl-4 mb:pr-4">{excerpt}</p>
-      <ul key={me} className="flex mt-3 ml-2">
-        {tags}
-      </ul>
     </li>
   )
 }

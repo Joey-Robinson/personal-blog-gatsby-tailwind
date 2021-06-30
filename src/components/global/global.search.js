@@ -1,24 +1,10 @@
 import React from "react"
 
-const GlobalSearch = ({
-  onSubmit,
-  value,
-  onChange,
-  placeholder,
-  id,
-  ariaLabel,
-  label,
-  spanText,
-  idFor,
-  className,
-  submitValue,
-  submitClassName,
-  submitStyle,
-}) => {
+const GlobalSearch = ({ onSubmit, value, onChange }) => {
   return (
     <div className="mt-8">
-      <label className="px-3" htmlFor={idFor}>
-        <span className="mx-1 text-lg text-link">{spanText}</span>
+      <label className="px-3" htmlFor="blog--search">
+        <span className="mx-1 text-lg text-link">Search Blog</span>
       </label>
       <form
         role="search"
@@ -28,10 +14,10 @@ const GlobalSearch = ({
         noValidate
       >
         <input
-          id={id}
-          label={label}
-          aria-label={ariaLabel}
-          placeholder={placeholder}
+          id="blog--search"
+          label="Search Blog"
+          ariaLabel="Search Blog"
+          placeholder="Search Blog"
           type="search"
           value={value}
           className="p-0 my-2 mx-0 h-8 w-48 border-none outline-none rounded text-lg bg-input text-aux"

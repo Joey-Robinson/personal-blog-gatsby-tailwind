@@ -35,7 +35,6 @@ const Blog = ({ allPosts }) => {
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts = hasSearchResults ? filteredData : morePosts
 
-  console.log(posts.map(({ date }) => date))
   return (
     <GlobalLayout>
       <h1
@@ -59,21 +58,16 @@ const Blog = ({ allPosts }) => {
         onSubmit={(event) => event.preventDefault()}
         value={query}
         onChange={handleInputChange}
-        placeholder="Search Blog"
-        id="blog--search"
-        spanText="Search Blog"
-        ariaLabel="Search Blog"
-        label="Search Blog"
-        idFor="blog--search"
         submitStyle={{ display: "none" }}
       />
-      <ul className="list-none mb-12 grid">
-        {posts.map(({ coverImage, tags, title, date, excerpt, slug }) => {
+      <ul className="list-none mb-1 grid">
+        {posts.map(({ coverImage, tags, date, title, excerpt, slug }) => {
           const tagList = tags.map((tag) => (
-            <li className="px-2 py-1 bg-link mx-2" key={Math.random()}>
-              <span aria-hidden="true">⸢ </span>
+            <li
+              className="sm:px-6 smp:px-2 py-1 mx-2 sm:bg-link smp:bg-none sm:rounded-full"
+              key={Math.random()}
+            >
               {tag}
-              <span aria-hidden="true"> ⸥</span>
             </li>
           ))
           return (
