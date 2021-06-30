@@ -15,7 +15,8 @@ const PostPreview = ({
 }) => {
   // const shortenedExcerpt = excerpt.slice(0, 150)
   return (
-    <li key={specialKey} className="my-10">
+    // Play with MT
+    <li key={specialKey} className="mb-10 mt-5">
       <h3 className="text-2xl text-link font-medium mb:pl-4 mb:pr-4">
         <Link as={`/blog/${slug}/`} href="/blog/[slug]/">
           <a>{title}</a>

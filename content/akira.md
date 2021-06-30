@@ -1,6 +1,6 @@
 ---
 title: "Akira, forever defining anime."
-excerpt: "Why and how Akira has - for 30 years now - defined anime, anime culture, and how it has influenced generations of anime to come. From its cyberpunk aesthetic, it"
+excerpt: "Why and how Akira has - for 30 years - defined anime, anime culture, and how it has influenced generations of anime to come. From its cyberpunk aesthetic, its incredible animation & fantastic voice acting (and sweet bike slides), Akira has remained at the top in terms of impact and importance to anime and pop culture in general."
 description: "Why and how Akira has - for 30 years now - defined anime, anime culture, and how it has influenced generations of anime to come."
 date: "2020-03-16"
 author:

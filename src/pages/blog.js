@@ -34,6 +34,8 @@ const Blog = ({ allPosts }) => {
   const { filteredData, query } = filteredPosts
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts = hasSearchResults ? filteredData : morePosts
+
+  console.log(posts.map(({ date }) => date))
   return (
     <GlobalLayout>
       <h1
