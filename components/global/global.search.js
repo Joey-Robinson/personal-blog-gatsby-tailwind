@@ -20,7 +20,7 @@ const GlobalSearch = ({ onSubmit, value, onChange }) => {
           placeholder="Search Blog"
           type="search"
           value={value}
-          className="p-0 my-2 mx-0 h-8 w-48 border-none outline-none rounded text-lg bg-input text-aux"
+          className="py-0 px-2 my-2 mx-0 h-8 w-48 border-none outline-none rounded text-lg bg-input text-aux"
           onChange={onChange}
         />
       </form>

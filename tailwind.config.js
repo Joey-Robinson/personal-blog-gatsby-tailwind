@@ -39,30 +39,32 @@ module.exports = {
     typography: {
       DEFAULT: {
         css: {
-          h1: {
-            fontWeight: "600",
-            fontSize: "3rem",
-            color: "#606d7f",
-            margin: "2rem 0 0 0",
-            color: "#ffff00",
-          },
+          h1: {},
           h2: {
             fontSize: "2.75rem",
-            margin: "",
-            padding: "",
+            padding: "0 0.75rem",
             color: "#606d7f",
           },
-          h3: { color: "#606d7f", fontSize: "2.5rem" },
-          h4: { color: "#606d7f", fontSize: "2.25rem" },
-          h5: { color: "#606d7f", fontSize: "2rem" },
+          h3: { padding: "0 0.75rem", color: "#606d7f", fontSize: "2.5rem" },
+          h4: { padding: "0 0.75rem", color: "#606d7f", fontSize: "2.25rem" },
+          h5: { padding: "0 0.75rem", color: "#606d7f", fontSize: "2rem" },
+          h6: { padding: "0 0.75rem", color: "#606d7f", fontSize: "1.75rem" },
           p: {
-            padding: "1rem 0",
+            padding: "1rem 0.75rem",
             color: "#ffff00",
             fontSize: "20px",
           },
           img: {
             width: "100%",
             margin: "1rem 0",
+          },
+          ul: {
+            listStyle: "square",
+            padding: "0 0.75rem",
+            margin: "1rem",
+          },
+          li: {
+            padding: "0.25rem 0",
           },
         },
       },
