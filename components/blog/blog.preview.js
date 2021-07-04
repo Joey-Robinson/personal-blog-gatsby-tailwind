@@ -6,7 +6,7 @@ const PostPreview = ({ title, path, date, image, tags, excerpt }) => {
   // const shortenedExcerpt = excerpt.slice(0, 150)
   return (
     // Play with MT
-    <li className="mb-10 mt-5">
+    <li key={path} className="mb-10 mt-5">
       <h3 className="text-2xl text-link font-medium mb:pl-4 mb:pr-4">
         <Link key={path} href={path}>
           <a>{title}</a>
@@ -23,6 +23,7 @@ const PostPreview = ({ title, path, date, image, tags, excerpt }) => {
           width={800}
           height={500}
           layout="responsive"
+          placeholder
           alt={`Thumb for ${title}`}
         />
       </div>

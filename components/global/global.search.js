@@ -16,7 +16,7 @@ const GlobalSearch = ({ onSubmit, value, onChange }) => {
         <input
           id="blog--search"
           label="Search Blog"
-          ariaLabel="Search Blog"
+          aria-label="Search Blog"
           placeholder="Search Blog"
           type="search"
           value={value}

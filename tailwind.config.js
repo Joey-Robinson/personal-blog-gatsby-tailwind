@@ -55,7 +55,6 @@ module.exports = {
             fontSize: "20px",
           },
           img: {
-            width: "100%",
             margin: "1rem 0",
           },
           ul: {

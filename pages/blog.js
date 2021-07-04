@@ -7,7 +7,7 @@ import PostPreview from "../components/blog/blog.preview"
 import GlobalLayout from "../components/global/global.layout"
 import GlobalSearch from "../components/global/global.search"
 
-export default function Home({ allPosts }) {
+export default function Blog({ allPosts }) {
   const morePosts = allPosts
   const emptyQuery = ""
   const [filteredPosts, setFilteredPosts] = useState({
@@ -37,7 +37,6 @@ export default function Home({ allPosts }) {
   const { filteredData, query } = filteredPosts
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts = hasSearchResults ? filteredData : morePosts
-
   return (
     <GlobalLayout>
       <Head>
@@ -69,11 +68,11 @@ export default function Home({ allPosts }) {
         submitStyle={{ display: "none" }}
       />
       <ul className="list-none mb-1 grid">
-        {posts.map((post) => {
+        {posts.map((post, index) => {
           const { title, path, date, image, tags, excerpt } = post
           const tagList = tags.map((tag) => (
             <li
-              className="sm:px-6 px-6 smp:my-2 smp:mx-4 py-1 bg-link sm:rounded-full"
+              className="text-label sm:px-6 px-6 smp:my-2 smp:mx-4 py-1 bg-link sm:rounded-full"
               key={Math.random()}
             >
               {tag}
@@ -81,6 +80,7 @@ export default function Home({ allPosts }) {
           ))
           return (
             <PostPreview
+              key={index}
               title={title}
               path={path}
               date={date}
