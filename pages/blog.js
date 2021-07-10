@@ -69,7 +69,7 @@ export default function Blog({ allPosts }) {
       />
       <ul className="list-none mb-1 grid">
         {posts.map((post, index) => {
-          const { title, path, date, image, tags, excerpt } = post
+          const { title, path, date, tags, excerpt } = post
           const tagList = tags.map((tag) => (
             <li
               className="text-label sm:px-6 px-6 smp:my-2 smp:mx-4 py-1 bg-link sm:rounded-full"
@@ -84,7 +84,6 @@ export default function Blog({ allPosts }) {
               title={title}
               path={path}
               date={date}
-              image={image}
               tags={tagList}
               excerpt={excerpt}
             />
