@@ -2,7 +2,7 @@ import React from "react"
 
 const GlobalSearch = ({ onSubmit, value, onChange }) => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 grid justify-items-center">
       <label className="px-3" htmlFor="blog--search">
         <span className="mx-1 text-lg text-link">Search Blog</span>
       </label>

@@ -5,6 +5,8 @@ module.exports = {
       primary: "#1a202c",
       link: "#9f7aea",
       input: "#606d7f",
+      mid: "#CFBD75",
+      secondary: "#382E5E",
     }),
     textColor: {
       primary: "#b6bfca",
