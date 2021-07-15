@@ -72,7 +72,7 @@ export default function Blog({ allPosts }) {
           const { title, path, date, tags, excerpt } = post
           const tagList = tags.map((tag) => (
             <li
-              className="text-label sm:px-6 smp:my-2 smp:mx-4 py-2 bg-link"
+              className="text-label smp:px-3 sm:px-6 smp:my-2 smp:mx-4 py-2 bg-link"
               key={Math.random()}
             >
               {tag}
