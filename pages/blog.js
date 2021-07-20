@@ -4,6 +4,7 @@ import Head from "next/head"
 import path from "path"
 import { useState } from "react"
 import PostPreview from "../components/blog/blog.preview"
+import Footer from "../components/footer/footer.main"
 import GlobalLayout from "../components/global/global.layout"
 import GlobalSearch from "../components/global/global.search"
 
@@ -49,14 +50,8 @@ export default function Blog({ allPosts }) {
     text-secondaryLink
     font-semibold
     text-5xl
-    mb:pl-3
-    mb:pr-3
-    mb:mt-10
-    smp:mt-10
-    xfl:pl-3
-    xfl:pr-3
-    xfl:mt-10
-    lpt:mt-10
+    mb:px-3
+    xfl:px-3
     lpt:px-3"
       >
         Blog
@@ -90,6 +85,9 @@ export default function Blog({ allPosts }) {
           )
         })}
       </ul>
+      <div className="mt-2 h-0.5 bg-input px-3" />
+
+      <Footer />
     </GlobalLayout>
   )
 }

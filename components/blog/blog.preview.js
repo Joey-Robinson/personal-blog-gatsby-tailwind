@@ -17,9 +17,7 @@ const PostPreview = ({ title, path, date, tags, excerpt }) => {
       </h3>
       <div className="my-1 text-aux smp:px-4 px-8 py-1">{date}</div>
       <p className="text-xl smp:px-4 smp:pb-2 px-8 pb-4">{excerpt}</p>
-      <ul className="flex flex-wrap justify-start smp:px-1 smp:pb-2 px-4 pb-3">
-        {tags}
-      </ul>
+      <ul className="flex flex-wrap justify-start pt-2 pb-3">{tags}</ul>
     </li>
   )
 }

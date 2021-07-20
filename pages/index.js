@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Footer from "../components/footer/footer.main"
 import GlobalLayout from "../components/global/global.layout"
 
 const Home = () => (
@@ -13,28 +14,31 @@ const Home = () => (
     text-secondaryLink
     font-semibold
     text-5xl
-    mb:pl-3
-    mb:pr-3
-    mb:mt-10
-    smp:mt-10
-    xfl:pl-3
-    xfl:pr-3
-    xfl:mt-10
-    lpt:mt-10
+    mb:px-3
+    xfl:px-3
     lpt:px-3"
     >
       Home
     </h1>
-    <div className="grid grid-rows-pp ">
+    <div className="grid grid-rows-pp">
+      <h2
+        className="
+    text-secondaryLink
+    font-semibold
+    self-center
+    text-3xl
+    mb:px-3
+    xfl:px-3
+    lpt:px-3"
+      >
+        This is from an H2 tag
+      </h2>
       <p
         className="
+        text-secondary
       text-2xl
-      text-secondary
-      row-span-3
-      self-center
+      row-start-2
       mb:px-4
-      mb:mt-4
-      mb:mb-6
       "
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis
@@ -50,6 +54,8 @@ const Home = () => (
         doloremque eligendi esse odio, voluptatem sapiente illo expedita.
       </p>
     </div>
+    <div className="mt-10 h-0.5 bg-input px-3" />
+    <Footer className="mt-5" />
   </GlobalLayout>
 )
 
